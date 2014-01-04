@@ -1,23 +1,24 @@
 class VisitorsController < ApplicationController
 
-	def new
-    	@visitor = Visitor.new
-  	end
+  def new
+    @visitor = Visitor.new
+  end
 
-  	def create
-    	@visitor = Visitor.new(secure_params)
-    	if @visitor.valid?
-      		flash[:notice] = "Chose #{@visitor.favorite}."
-      		render :new
-    	else
-      		render :new
-    	end
-  	end
+  def create
+    @visitor = Visitor.new(secure_params)
+    if @visitor.valid?
+      @visitor.update_spreadsheet
+      flash[:notice] = "Chose #{@visitor.favorite}."
+      render :new
+    else
+      render :new
+    end
+  end
 
-  	private
+  private
 
-  	def secure_params
-    	params.require(:visitor).permit(:favorite, :comment)
-  	end
+  def secure_params
+    params.require(:visitor).permit(:favorite, :comment)
+  end
 
 end
