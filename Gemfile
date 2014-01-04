@@ -9,6 +9,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'activerecord-tableless'
 gem 'bootstrap-sass'
+gem 'bootswatch-rails' 
+#BEAUTIFUL. this will automatically import an open source bootstrap theme into my life
 gem 'figaro'
 gem 'google_drive'
 gem 'high_voltage'

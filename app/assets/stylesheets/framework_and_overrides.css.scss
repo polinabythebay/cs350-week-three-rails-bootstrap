@@ -1,19 +1,26 @@
 // import the CSS framework
+
+// First import Bootswatch theme variables http://bit.ly/KIu8IN
+//@import 'bootswatch/slate/variables';
+
+//Use Twitter bootstrap
 @import "bootstrap";
 
+
 // make all images responsive by default
-img {
+/*img {
   @extend .img-responsive;
   margin: 0 auto;
   }
 // override for the 'Home' navigation link
 .navbar-brand {
   font-size: inherit;
-  }
+  }*/
 
 // THESE ARE EXAMPLES YOU CAN MODIFY
 // create your own classes
 // to make views framework-neutral
+/*
 .column {
   @extend .col-md-6;
   @extend .text-center;
@@ -29,10 +36,10 @@ img {
   @extend .btn;
   @extend .btn-primary;
   @extend .btn-lg;
-  }
+  }*/
 // apply styles to HTML elements
 // to make views framework-neutral
-main {
+/*main {
   @extend .container;
   background-color: #eee;
   padding-bottom: 80px;
@@ -42,4 +49,4 @@ main {
 section {
   @extend .row;
   margin-top: 20px;
-  }
+  }*/
